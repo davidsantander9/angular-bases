@@ -1,5 +1,14 @@
 <p>Hero list</p>
 
+<div *ngIf="heroDeleted; else notDeleted">
+    <h3>Hero deleted: <small>{{ heroDeleted }}</small></h3>
+</div>
+
+<ng-template #notDeleted>
+    <h3>Nothing deleted</h3>
+</ng-template>
+
+<hr>
 <ul>
     <li *ngFor="let hero of heroes; let i = index">
        {{ i + 1 }} - {{hero}}
@@ -10,7 +19,3 @@
     Delete
 </button>
 
-<div>
-    <h3>Hero deleted:</h3>
-    <span>{{ heroDeleted }}</span>
-</div>
