@@ -6,9 +6,11 @@ import { Component } from '@angular/core';
 })
 export class ListComponent  {
 
-  constructor() {
-    console.log('Contructor')
-   }
+  heroes: string[] = ['Spiderman', 'Ironman', 'Hulk', 'Thor' ];
+  heroDeleted: string = '';
 
+  deleteHero = (): void => {
+    this.heroDeleted = this.heroes.pop() || '';
+  }
 
 }
