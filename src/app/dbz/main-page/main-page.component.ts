@@ -32,11 +32,14 @@ export class MainPageComponent {
       return
     }
 
+    this.characters.push(this.character)
+
+    this.character = {
+      name: '',
+      power: 0
+    }
 
   }
 
-  // changeName(event: any){
-    
-  // }
 
 }
