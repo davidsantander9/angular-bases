@@ -3,9 +3,7 @@ import { Character } from '../interfaces/dbz.interface';
 
 @Injectable()
 export class DbzService {
-    constructor() {
-        console.log('Init service');
-    }
+    constructor() {}
 
     private _characters: Character [] = [
         { 
@@ -21,5 +19,8 @@ export class DbzService {
         return [...this._characters];
     }
 
-    
+    addCharacter( arg: Character){
+        this._characters.push(arg);
+    }
+
 }
