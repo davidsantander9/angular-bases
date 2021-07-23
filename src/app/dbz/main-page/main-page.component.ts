@@ -8,21 +8,17 @@ import { DbzService } from '../services/dbz.service';
 })
 export class MainPageComponent {
 
-  characters: Character[] = []
+  // constructor( private dbzService: DbzService) { }
 
-  constructor( private dbzService: DbzService) {
-    this.characters = this.dbzService.characters;
-  }
+  // get characters(): Character[]{
+  //   return this.dbzService.characters;
+  // }
 
-  
+  constructor() {}
 
   character: Character = {
     name: 'Trunks',
     power: 1500
-  }
-
-  addNewCharacter(arg: Character){
-    this.characters.push(arg);
   }
 
 

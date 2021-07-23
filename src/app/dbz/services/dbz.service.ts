@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Character } from "../interfaces/dbz.interface";
+import { Character } from '../interfaces/dbz.interface';
 
 @Injectable()
 export class DbzService {
@@ -7,7 +7,7 @@ export class DbzService {
         console.log('Init service');
     }
 
-    characters: Character [] = [
+    private _characters: Character [] = [
         { 
           name: 'Goku',
           power: 1500001,
@@ -16,4 +16,10 @@ export class DbzService {
           power: 1500000
         }
     ]
+
+    get characters(): Character[]{
+        return [...this._characters];
+    }
+
+    
 }
