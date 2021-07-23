@@ -22,5 +22,9 @@ export class MainPageComponent {
     power: 1500
   }
 
+  addNewCharacter(arg: Character){
+    this.characters.push(arg);
+  }
+
 
 }
