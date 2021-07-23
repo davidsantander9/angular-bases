@@ -18,23 +18,8 @@ export class MainPageComponent {
   ]
 
   character: Character = {
-    name: '',
-    power: 0
-  }
-
-  add( ){
-    
-    if( this.character.name.trim().length === 0 ){
-      return
-    }
-
-    this.characters.push(this.character)
-
-    this.character = {
-      name: '',
-      power: 0
-    }
-
+    name: 'Trunks',
+    power: 1500
   }
 
 

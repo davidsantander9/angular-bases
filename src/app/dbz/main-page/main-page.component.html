@@ -3,25 +3,12 @@
 
 <div class="row">
     <div class="col">
-        <app-characters [characters]="characters"></app-characters>
+        <app-characters [characters]="characters" ></app-characters>
     </div>
     <div class="col">
-        <h3>Agregar <small>{{ character.name }}</small></h3>
-        <hr>
-        <form (ngSubmit)="add( )">
-            <input 
-                type="text" 
-                placeholder="Name"
-                name="name"
-                [(ngModel)]="character.name"
-                />
-            <input 
-                type="number" 
-                placeholder="Power"
-                name="power"
-                [(ngModel)]="character.power"
-            />
-            <button type="submit">Add</button>
-        </form>
+        <app-add 
+            [character]="character"
+            [characters]="characters"
+        ></app-add>
     </div>
 </div>
